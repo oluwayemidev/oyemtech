@@ -40,7 +40,7 @@ const public_url = process.env || `http://loclhost:${port}`;
 
 const indexHTML = path.join(public_path, "index.html");
 const indexHtmlContent = fs.readFileSync(indexHTML, "utf-8").replace(/__PUBLIC_URL_PLACEHOLDER__/g, public_url);
-const admin = fs.readFileSync('./public/Admin/admin.html', 'utf8');
+const admin = fs.readFile('./public/Admin/admin.html', 'utf8');
 
 app.use(express.static('public')); // default
 
