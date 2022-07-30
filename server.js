@@ -80,7 +80,7 @@ app.get('/api/Blog/images/:blogImage', (req, res) => {
 })
 
 app.get('/admin', (req, res) => {
-    res.sendFile('public/Admin/admin.html');
+    res.send(admin);
     res.end();
 })
 
