@@ -36,6 +36,7 @@ app.use('/', express.static('admin'));
 
 const port = parseInt(process.env.PORT || 5000, 10);
 const public_path = path.resolve(__dirname, "public");
+
 const public_url = process.env || `http://loclhost:${port}`;
 
 const indexHTML = path.join(public_path, "index.html");
@@ -43,6 +44,7 @@ const indexHtmlContent = fs.readFileSync(indexHTML, "utf-8").replace(/__PUBLIC_U
 const admin = fs.readFileSync('./public/Admin/admin.html', 'utf8');
 
 app.use(express.static('public')); // default
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('', (req, res) => {
     res.send(indexHtmlContent);
