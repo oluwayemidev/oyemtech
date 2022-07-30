@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const imageUpload = document.getElementById('image');
+        const imagePreview = document.getElementById('preview');
+
+        imageUpload.addEventListener('change', () => {
+            console.log(imageUpload.value)
+        });
+    </script>
+</head>
+<body>
+    
+    <form action="/success" method="post" enctype="multipart/form-data">
+        <h2>Post a Blog</h2>
+        <input type="text" name="heading" id="heading" placeholder="Blog Title">
+        <input type="file" id="image" name="filetoupload" accept="image/jpeg, image/png">
+        <textarea name="post" id="post" cols="30" rows="10" placeholder="Your Blog here"></textarea>
+        <input type="text" name="tag" id="tag" placeholder="Tag">
+        <input type="submit" value="Post">
+    </form>
+
+</body>
+</html>

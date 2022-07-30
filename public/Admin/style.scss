@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    margin-top: 50px;
+    padding: 30px 50px;
+    background-color: rgb(206, 226, 255);
+    color: rgb(73, 74, 85);
+    border: solid 2px rgb(171, 184, 255);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 20px;
+
+    input, textarea{
+        background-color: transparent;
+        border: solid 2px rgb(171, 184, 255);
+        border-radius: 15px;
+        padding: 15px 20px;
+        outline: none;
+        resize: none;
+    }
+    input[type = text]:focus{
+        border: solid 2px rgb(116, 126, 182);
+    }
+    input[type = submit]{
+        background-color: rgb(171, 184, 255);
+        color: rgb(116, 126, 182);
+        cursor: pointer;
+    }
+}
