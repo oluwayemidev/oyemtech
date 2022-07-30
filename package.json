@@ -4,7 +4,7 @@
   "description": "Tech Company",
   "main": "server.js",
   "scripts": {
-    "start": "npm run server"
+    "start": "npm run server.js"
   },
   "keywords": [
     "oyemtech",
